@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>プロンプトジェネレーター</title>
+    <link rel="shortcut icon" href="./images/icon16.png">
+    <style>
+      body {
+        background: linear-gradient(45deg, rgb(72, 59, 251), #00FFFF);
+        color: #fff;
+        height: 823px;
+        padding-left: 10px;
+      }
+      h1{font-size: 38px;margin: 0 0 20px;}
+      .setMenu, .question{margin: 0 0 30px 0;}
+      .button_green {
+        margin-left: 10px;
+        width: 140px;
+        padding: 10px 0;
+        color: #fff;
+        background-color: rgb(159 169 166);
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        box-shadow: 0px 1px 3px rgb(179, 239, 220);
+        cursor: pointer;
+      }
+      .button_green.active {background-color: rgb(44, 157, 119);}
+      h2 {margin: 0 0 10px 0;}
+      #questionText {padding: 10px 5px;border: none;font-size: 14px;}
+      textarea {padding: 10px;font-size: 14px;line-height: 17px;border: none;}
+    </style>
+  </head>
+  <body>
+    <h1>Frequent Messages</h1>
+
+    <div class="setMenu">
+      <h2>1.テーマを選択</h2>
+      <!-- Program ボタン -->
+      <button id="programButton" class="button_green">プログラム</button>
+      <!-- Extensions ボタン -->
+      <button id="extensionsButton" class="button_green">Chrome拡張機能</button>
+      <!-- WebDesigner ボタン -->
+      <button id="webDesignerButton" class="button_green">Webデザイン</button>
+      <!-- normalボタン追加 -->
+      <button id="normalButton" class="button_green">ノーマル</button>
+    </div>
+
+    <div class="question">
+      <h2>2.質問内容</h2>
+      <!-- 質問テキスト -->
+      <input type="text" id="questionText" size="70" style="margin-left: 10px;">
+      <button id="submitQuestion" style="margin-left: 10px;">決定</button>
+    </div>
+
+    <!-- テキストエリア デフォルトでデフォルトと記載 -->
+    <textarea id="defaultText" rows="23" cols="80" style="display: block; margin: 0 0 20px 10px;"></textarea>
+
+    <div class="sendArea">
+      <h2>3.プロンプト送信</h2>
+      <!-- 送信ボタン -->
+      <button id="sendButton" class="button_green active" style="margin-left: 10px;">送信</button>
+    </div>
+
+  </body>
+  <script src="popup.js"></script>
+</html>
